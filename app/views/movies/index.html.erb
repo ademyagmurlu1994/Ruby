@@ -1,0 +1,7 @@
+<br>
+<% @movies.each do |movie| %>
+    <%= link_to movie.name, movie_path(movie) %>
+    <%= link_to 'Düzenle', edit_movie_path(movie) %>
+    <%= link_to 'Sil', movie_path(movie), method: :delete, data:{confirm: 'Emin misiniz' }%>
+    <br>
+<%end%>
